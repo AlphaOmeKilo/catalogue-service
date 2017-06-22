@@ -4,7 +4,6 @@ build:
     - script:
         name: Maven Execution
         code: |
-          mkdir bin
-          curl -sL http://download.oracle.com/otn/utilities_drivers/jdbc/121010/ojdbc7.jar -o /pipeline/source/ojdbc7.jar
-          ls /pipeline/source/
+          curl -sL http://download.oracle.com/otn/utilities_drivers/jdbc/121010/ojdbc7.jar
+          ls
           
