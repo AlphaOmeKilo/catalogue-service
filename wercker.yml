@@ -1,11 +1,18 @@
 box: maven:latest
-build:
+
+pre-build:
   steps:
     - script:
-        name: Maven Execution
+        name: Pre-build installation
         code: |
           curl -L http://download.oracle.com/otn/utilities_drivers/jdbc/121010/ojdbc7.jar > /pipeline/source/ojdbc7.jar
           mvn install:install-file -Dfile=ojdbc7.jar -DgroupId=com.oracle -DartifactId=ojdbc7 -Dversion=12.1.0 -Dpackaging=jar
+
+build:
+  steps:
+    - script:
+        name: build
+        code: |
           mvn clean install
           
 deploy:
