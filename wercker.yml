@@ -13,6 +13,7 @@ build:
     - script:
         name: build
         code: |
+          ls
           mvn clean install
           
 deploy:
