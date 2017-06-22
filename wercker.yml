@@ -6,3 +6,4 @@ build:
         code: |
           mkdir bin
           curl -sL http://download.oracle.com/otn/utilities_drivers/jdbc/121010/ojdbc7.jar -o ojdbc7.jar
+          mvn install:install-file -Dfile=ojdbc7.jar -DgroupId=com.oracle -DartifactId=ojdbc7 -Dversion=12.1.0 -Dpackaging=jar
