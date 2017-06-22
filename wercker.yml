@@ -22,4 +22,5 @@ build:
   steps:
     - script:
         name: Maven Execution
-        code: mvn clean install
+        code: |
+          mvn -version
